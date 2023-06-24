@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  flask:
+    image: charan/flask:latest
+    working_dir: /srv
+    environment:
+      FLASK_APP: hello
+    volumes:
+      - $PWD:/srv
+    ports:
+      - "5002:5001"
